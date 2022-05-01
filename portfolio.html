@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Портфолио</title>
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    /> -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+
+  <body>
+    <!-- шапка сайта -->
+    <header class="page-header">
+      <div class="page-header__container">
+        <!-- <div class="page-header__logo-container"> -->
+        <a href="" class="logo page-header__logo" data-logo>
+          <span lang="en">Web</span
+          ><span lang="en" class="page-header__logo--color">Studio</span></a
+        >
+        <button
+          type="button"
+          class="menu-button is-open"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg width="20" height="20" aria-label="switcher mobile menu">
+            <use
+              class="icon-menu"
+              href="./images/icons.svg#icon-close_24px-1"
+            ></use>
+            <use
+              class="icon-cross"
+              href="./images/icons.svg#icon-menu_24px-1"
+            ></use>
+          </svg>
+        </button>
+        <!-- </div> -->
+
+        <!-- навигация -->
+        <div class="menu-container" id="menu-container" data-menu>
+          <!-- <div class="main-nav__wraper"> -->
+          <nav class="main-nav">
+            <ul class="main-nav__list list">
+              <li class="list-style list-item main-nav__item">
+                <a
+                  class="main-nav__link main-nav__link--color"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="list-style item main-nav__item">
+                <a
+                  class="main-nav__link main-nav__link--color main-nav__link--current main-nav__list--underline"
+                  href=""
+                  >Портфолио</a
+                >
+              </li>
+              <li class="list-style item main-nav__item">
+                <a class="main-nav__link main-nav__link--color" href=""
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- </div> -->
+
+          <!-- мэйл и контакты -->
+          <div class="authorisation-wraper">
+            <ul class="auth-nav list">
+              <li class="list-style item auth-nav__item">
+                <a
+                  class="auth-nav__link auth-nav__link--color"
+                  href="mailto:info@devstudio.com"
+                  aria-label="э-мейл"
+                >
+                  <svg width="16" height="12" class="auth-nav__icon-envelope">
+                    <use href="./images/icons.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="list-style item auth-nav__item">
+                <a
+                  class="auth-nav__link auth-nav__link--color auth-nav__link--font"
+                  href="tel:+380961111111"
+                  aria-label="телефон"
+                >
+                  <svg width="10" height="16" class="auth-nav__icon-smartphone">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+
+            <!-- page-header social links -->
+            <div class="social-wraper">
+              <ul class="social-links list">
+                <li class="list-style social-links__item">
+                  <a href="" class="social-links__link">Instagram</a>
+                </li>
+                <li class="list-style social-links__item">
+                  <a href="" class="social-links__link">Twitter</a>
+                </li>
+                <li class="list-style social-links__item">
+                  <a href="" class="social-links__link">facebook</a>
+                </li>
+                <li class="list-style social-links__item">
+                  <a href="" class="social-links__link">Linkedin</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- основной блок -->
+    <main>
+      <section class="filter-nav filter-section">
+        <div class="filter-section__container">
+          <!-- скрытый заголовок -->
+          <h1 class="hidden">Портфолио</h1>
+          <ul class="filter-nav__list list">
+            <li class="list-style filter-nav__item">
+              <button type="button" class="filter-btn current-btn">Все</button>
+            </li>
+
+            <li class="list-style filter-nav__item">
+              <button type="button" class="filter-btn">Веб-сайты</button>
+            </li>
+
+            <li class="list-style filter-nav__item">
+              <button type="button" class="filter-btn">Приложения</button>
+            </li>
+
+            <li class="list-style filter-nav__item">
+              <button type="button" class="filter-btn">Дизайн</button>
+            </li>
+
+            <li class="list-style filter-nav__item">
+              <button type="button" class="filter-btn">Маркетинг</button>
+            </li>
+          </ul>
+
+          <ul class="card-set list">
+            <li class="list-style card-set__item">
+              <a href="" class="card-set__link">
+                <div class="product">
+                  <div class="product__container">
+                    <img
+                      class="product__img"
+                      srcset="
+                        ./images/technokryak-mobile1x.jpg  450w,
+                        ./images/technokryak-mobile2x.jpg  900w,
+                        ./images/technokryak-tablet1x.jpg  354w,
+                        ./images/technokryak-tablet2x.jpg  708w,
+                        ./images/technokryak-desktop1x.jpg 270w,
+                        ./images/technokryak-desktop2x.jpg 540w
+                      "
+                      src="./images/technokryak-mobile1x.jpg"
+                      alt="технокряк"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                    <p class="product__text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+                  <div class="product__content">
+                    <h2 class="product__title">Технокряк</h2>
+                    <p class="product__label">Веб-сайт</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="list-style card-set__item">
+              <a href="" class="card-set__link">
+                <div class="product">
+                  <div class="product__container">
+                    <img
+                      class="product__img"
+                      srcset="
+                        ./images/poster-mobile1x.jpg  450w,
+                        ./images/poster-mobile2x.jpg  900w,
+                        ./images/poster-tablet1x.jpg  354w,
+                        ./images/poster-tablet2x.jpg  708w,
+                        ./images/poster-desktop1x.jpg 270w,
+                        ./images/poster-desktop2x.jpg 540w
+                      "
+                      src="./images/poster-mobile1x.jpg"
+                      alt="постер игры в баскетбол"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                    <p class="product__text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+
+                  <div class="product__content">
+                    <h2 class="product__title">
+                      Постер <span lang="en">New Orlean vs Golden Star</span>
+                    </h2>
+                    <p class="product__label">Дизайн</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="list-style card-set__item">
+              <a href="" class="card-set__link">
+                <div class="product">
+                  <div class="product__container">
+                    <img
+                      class="product__img"
+                      srcset="
+                        ./images/seafood-mobile1x.jpg  450w,
+                        ./images/seafood-mobile2x.jpg  900w,
+                        ./images/seafood-tablet1x.jpg  354w,
+                        ./images/seafood-tablet2x.jpg  708w,
+                        ./images/seafood-desktop1x.jpg 270w,
+                        ./images/seafood-desktop2x.jpg 540w
+                      "
+                      src="./images/seafood-mobile1x.jpg"
+                      alt="ресторан морепродукты"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                    <p class="product__text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+
+                  <div class="product__content">
+                    <h2 class="product__title">
+                      Ресторан <span lang="en">Seafood</span>
+                    </h2>
+                    <p class="product__label">Приложение</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="list-style card-set__item">
+              <a href="" class="card-set__link">
+                <div class="product">
+                  <div class="product__container">
+                    <img
+                      class="product__img"
+                      srcset="
+                        ./images/prime-mobile1x.jpg  450w,
+                        ./images/prime-mobile2x.jpg  900w,
+                        ./images/prime-tablet1x.jpg  354w,
+                        ./images/prime-tablet2x.jpg  708w,
+                        ./images/prime-desktop1x.jpg 270w,
+                        ./images/prime-desktop2x.jpg 540w
+                      "
+                      src="./images/prime-mobile1x.jpg"
+                      alt="наушники"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                    <p class="product__text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+
+                  <div class="product__content">
+                    <h2 class="product__title">
+                      Проект <span lang="en">Prime</span>
+                    </h2>
+                    <p class="product__label">Маркетинг</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="list-style card-set__item">
+              <a href="" class="card-set__link">
+                <div class="product">
+                  <div class="product__container">
+                    <img
+                      class="product__img"
+                      srcset="
+                        ./images/boxes-mobile1x.jpg  450w,
+                        ./images/boxes-mobile2x.jpg  900w,
+                        ./images/boxes-tablet1x.jpg  354w,
+                        ./images/boxes-tablet2x.jpg  708w,
+                        ./images/boxes-desktop1x.jpg 270w,
+                        ./images/boxes-desktop2x.jpg 540w
+                      "
+                      src="./images/boxes-mobile1x.jpg"
+                      alt="коробки"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                    <p class="product__text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+
+                  <div class="product__content">
+                    <h2 class="product__title">
+                      Проект <span lang="en">Boxes</span>
+                    </h2>
+                    <p class="product__label">Приложение</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="list-style card-set__item">
+              <a href="" class="card-set__link">
+                <div class="product">
+                  <div class="product__container">
+                    <img
+                      class="product__img"
+                      srcset="
+                        ./images/inspiration-mobile1x.jpg  450w,
+                        ./images/inspiration-mobile2x.jpg  900w,
+                        ./images/inspiration-tablet1x.jpg  354w,
+                        ./images/inspiration-tablet2x.jpg  708w,
+                        ./images/inspiration-desktop1x.jpg 270w,
+                        ./images/inspiration-desktop2x.jpg 540w
+                      "
+                      src="./images/inspiration-mobile1x.jpg"
+                      alt="монитор"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                    <p class="product__text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+
+                  <div class="product__content">
+                    <h2 class="product__title" lang="en">
+                      Inspiration has no Borders
+                    </h2>
+                    <p class="product__label">Веб-сайт</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="list-style card-set__item">
+              <a href="" class="card-set__link">
+                <div class="product">
+                  <div class="product__container">
+                    <img
+                      class="product__img"
+                      srcset="
+                        ./images/edition-mobile1x.jpg  450w,
+                        ./images/edition-mobile2x.jpg  900w,
+                        ./images/edition-tablet1x.jpg  354w,
+                        ./images/edition-tablet2x.jpg  708w,
+                        ./images/edition-desktop1x.jpg 270w,
+                        ./images/edition-desktop2x.jpg 540w
+                      "
+                      src="./images/edition-mobile1x.jpg"
+                      alt="лимитированное издание"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                    <p class="product__text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+
+                  <div class="product__content">
+                    <h2 class="product__title">
+                      Издание <span lang="en">Limited Edition</span>
+                    </h2>
+                    <p class="product__label">Дизайн</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="list-style card-set__item">
+              <a href="" class="card-set__link">
+                <div class="product">
+                  <div class="product__container">
+                    <img
+                      class="product__img"
+                      srcset="
+                        ./images/lab-mobile1x.jpg  450w,
+                        ./images/lab-mobile2x.jpg  900w,
+                        ./images/lab-tablet1x.jpg  354w,
+                        ./images/lab-tablet2x.jpg  708w,
+                        ./images/lab-desktop1x.jpg 270w,
+                        ./images/lab-desktop2x.jpg 540w
+                      "
+                      src="./images/lab-mobile1x.jpg"
+                      alt="бирка"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                    <p class="product__text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+
+                  <div class="product__content">
+                    <h2 class="product__title">
+                      Проект <span lang="en">LAB</span>
+                    </h2>
+                    <p class="product__label">Маркетинг</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+
+            <li class="list-style card-set__item">
+              <a href="" class="card-set__link">
+                <div class="product">
+                  <div class="product__container">
+                    <img
+                      class="product__img"
+                      srcset="
+                        ./images/growing-mobile1x.jpg  450w,
+                        ./images/growing-mobile2x.jpg  900w,
+                        ./images/growing-tablet1x.jpg  354w,
+                        ./images/growing-tablet2x.jpg  708w,
+                        ./images/growing-desktop1x.jpg 270w,
+                        ./images/growing-desktop2x.jpg 540w
+                      "
+                      src="./images/growing-mobile1x.jpg"
+                      alt="розвивающийся бизнес"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                    <p class="product__text">
+                      Ресурс предлагает комплексные предложения с разным уровнем
+                      функционала и сервисов. Все это позволит посетителю
+                      получить исчерпывающие сведения о компании или частном
+                      лице.
+                    </p>
+                  </div>
+
+                  <div class="product__content">
+                    <h2 class="product__title" lang="en">Growing Business</h2>
+                    <p class="product__label">Приложение</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- подвал сайта -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__unit">
+          <div class="footer-contacts">
+            <a href="" class="logo footer-contacts__logo"
+              ><span lang="en">Web</span
+              ><span lang="en" class="footer-contacts__logo--color"
+                >Studio</span
+              ></a
+            >
+            <address class="footer-contacts__location">
+              <ul class="list footer-contacts__list">
+                <li class="list-style footer-contacts__item">
+                  <a
+                    class="footer-contacts__map"
+                    href="https://goo.gl/maps/CNSafUn4p5a7UVto9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="list-style footer-contacts__item">
+                  <a
+                    class="link footer-contacts__link"
+                    href="mailto:info@example.com"
+                    >info@example.com</a
+                  >
+                </li>
+                <li class="list-style footer-contacts__item">
+                  <a class="link footer-contacts__link" href="tel:+380991111111"
+                    >099 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="footer-communities">
+            <p class="footer-communities__text">присоединяйтесь</p>
+            <ul class="list footer-communities__list">
+              <li class="list-style footer-communities__item">
+                <a
+                  href=""
+                  class="footer-communities__link"
+                  aria-label="instagram"
+                >
+                  <svg class="footer-communities__icon">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="list-style footer-communities__item">
+                <a
+                  href=""
+                  class="footer-communities__link"
+                  aria-label="twitter"
+                >
+                  <svg class="footer-communities__icon">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="list-style footer-communities__item">
+                <a
+                  href=""
+                  class="footer-communities__link"
+                  aria-label="facebook"
+                >
+                  <svg class="footer-communities__icon">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="list-style footer-communities__item">
+                <a
+                  href=""
+                  class="footer-communities__link"
+                  aria-label="linkedin"
+                >
+                  <svg class="footer-communities__icon">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <form class="footer-form">
+          <p class="footer-form__text">Подпишитесь на рассылку</p>
+          <div class="footer-form__content">
+            <input
+              type="email"
+              name="email"
+              class="footer-form__mail"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="btn footer-form__btn-submit">
+              Подписаться
+            </button>
+          </div>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>

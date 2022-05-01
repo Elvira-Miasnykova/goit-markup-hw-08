@@ -1,0 +1,113 @@
+.hero-section {
+  //max-width: 479px;
+  min-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  
+
+  text-align: center;
+  background-color: $secondary-bgcolor;
+  background-image: linear-gradient(to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)),
+    url(../images/Header-1x.jpg);
+  background-position: center;
+  background-size: cover;
+
+
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    
+      background-image: linear-gradient(to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+      url(../images/Header-2x.jpg);
+   
+  }
+
+  @media screen and (min-width: 768px) {
+    
+      max-width: 768px;
+      background-image: linear-gradient(to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+      url(../images/Header-tablet-1x.jpg);
+   
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+     
+        background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+          url(../images/Header-tablet-2x.jpg);
+     
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+
+    max-width: 1600px;
+    min-height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)),
+    url(../images/header-desktop1x.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+
+      background-image: linear-gradient(to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)),
+      url(../images/header-desktop2x.jpg);
+
+    }
+  }
+
+    &__container {
+      @extend %container;
+    }
+
+    &__inner {
+      display: inline-block;
+      max-width: 360px;
+      text-align: center;
+
+       @media screen and (min-width: $desktop) {
+        max-width: 696px;
+       }
+     }
+    
+    &__title {
+      margin-bottom: 30px;
+    
+      font-weight: 900;
+      font-size: 26px;
+      line-height: 1.62;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: $white-txcolor;
+
+      @media screen and (min-width: $desktop) {
+        font-size: 44px;
+        line-height: 1.36;  
+      }
+    }
+
+    &__btn {
+      @extend %btn;
+    }
+    
+    &__btn:hover,
+    &__btn:focus {
+      background-color: $btn-hover-color;
+    }
+}
+

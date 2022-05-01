@@ -1,0 +1,105 @@
+.customers-section {
+   @extend %section;
+    padding-top: 60px;
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+    }
+    
+    &__container{
+        @extend %container;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        text-align: center;
+    
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.18;
+        letter-spacing: 0.03em;
+    
+        color: $title-txcolor;
+
+        @media screen and (min-width: $desktop) {
+            margin-bottom: 50px;
+            font-size: 36px;
+            line-height: 1.16;
+        }
+    }
+
+    &__list {
+        text-align: center;
+
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -30px;
+            margin-bottom: -30px;
+        }
+        
+
+        @media screen and (min-width: $desktop) {
+            display: flex;
+            margin-right: -30px;
+        }
+
+    }
+
+    &__item {
+        display: block;
+        flex-basis: calc(100% / 2 - 30px);
+        margin-right: 30px;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: $tablet) {
+            flex-basis: calc(100% / 3 - 30px);
+        }
+
+        @media screen and (min-width: $desktop) {
+            flex-wrap: nowrap;            
+            flex-basis: calc(100% / 6 - 30px);
+            margin-right: 30px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        @include flexPosition($type: inline-flex);
+        width: 210px;
+        height: 92px;
+        border: 1px solid $svg-bgcolor;
+        border-radius: 4px;
+        color: $svg-bgcolor;
+        transition: color 250ms $function-animation,
+            border-color 250ms $function-animation;
+
+        @media screen and (min-width: $tablet) {
+            width: 226px;
+            
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: 170px;
+        
+        }
+    }
+
+    &__link:focus,
+    &__link:hover {
+        color: $accent-color;
+        border: 1px solid $accent-color;
+    }
+    
+    &__icon {
+        width: 106px;
+        height: 60px;
+        fill: currentColor;
+    }
+}
+
+
+
+
+
+

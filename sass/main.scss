@@ -1,0 +1,25 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap');
+// modern-normalize
+@import url('https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css');
+// partial
+@import "./utils/variables";
+@import "./utils/breakpoints";
+@import "./components/body";
+@import "./utils/reset";
+@import "./utils/placeholders";
+@import "./utils/mixins";
+@import "./components/common/logo";
+@import "./components/page-header";
+@import "./components/hero-section";
+@import "./components/benefits-section";
+@import "./components/app-section";
+@import "./components/team-section";
+@import "./components/customers-section";
+@import "./components/footer";
+@import "./components/portfolio";
+@import "./components/modal";
+
+
+
+

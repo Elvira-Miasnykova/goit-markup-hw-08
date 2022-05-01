@@ -1,0 +1,277 @@
+.footer {
+   max-height: 603px;
+   padding-top: 60px;
+   padding-bottom: 60px;
+   background-color: $secondary-bgcolor;
+
+    @media screen and (min-width: $tablet) {
+        max-height: 463px;
+    }
+
+   @media screen and (min-width: $desktop) {
+        max-height: 252px;
+   }
+
+    &__container {
+        @extend %container;
+
+        @media screen and (min-width: $desktop) {
+         @include flexPosition($main-axis: space-between, $cross-axis: baseline); 
+        }
+      
+    }
+    &__unit {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 60px;
+
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: baseline;
+        }
+
+        // @media screen and (min-width: $desktop) {
+        //     justify-content: space-between;
+        // }
+        
+    }
+}
+
+.footer-contacts {
+    @media screen and (max-width:767px) {
+        margin-bottom: 60px;
+        align-items: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 70px;
+        text-align: left;
+    }
+   
+   // margin-right: 70px;
+
+    &__logo {
+        display: block;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        @media screen and (min-width: $desktop) {
+            text-align: left;
+        }
+    }
+    
+    &__logo--color {
+        color: $white-txcolor;
+    }
+
+    &__location {
+        display: block;
+        text-align: center;
+        font-style: normal;
+
+        @media screen and (min-width: $desktop) {
+            text-align: left;
+        }
+    }
+    
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+    
+    &__map {
+        display: block;
+        text-align: center;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    
+        color: $white-txcolor;
+
+        @media screen and (min-width: $desktop) {
+            text-align: left;
+        }
+    }
+    
+    &__link {
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    
+        color: rgba(255, 255, 255, 0.6);
+        transition: color 250ms $function-animation;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: $accent-color;
+    }
+}
+
+.footer-communities {
+    display: block;
+    text-align: center;
+   // margin-right: 93px;
+
+    @media screen and (min-width: $desktop) {
+        text-align: left;
+    }
+
+    &__text {
+        @extend %text;
+    }
+    
+   &__list {
+        
+        display: flex;
+        justify-content: center;
+        margin-right: -10px;
+    }
+
+    &__item {
+        display: block;
+       
+        margin-right: 10px;
+       
+        
+    }
+    
+    &__link {
+        
+        
+        @include flexPosition($type: inline-flex);
+        margin: 0;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+    
+        border-radius: 50px;
+        color: $white-txcolor;
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: background-color 250ms $function-animation;
+    }
+
+    &__link:focus,
+    &__link:hover {
+        background-color: $accent-color;
+    }
+    
+    &__icon {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+    }   
+}
+
+.footer-form {
+    display: block;
+
+    &__content{
+        display: inline-block;
+        text-align: center;
+
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @media screen and (min-width: $desktop) {
+            display: inline-block;
+
+        }
+
+       
+        }
+    
+
+    &__text{
+        display: block;
+        text-align: center;
+        @extend %text;
+
+        @media screen and (min-width: $desktop) {
+            text-align: left;
+        }
+    }
+
+    &__mail {
+        @media screen and (max-width: 470px) {
+            max-width: 450px;
+            width: 100%;
+        }
+        display: inline-block;
+        margin-bottom: 20px;
+        padding-left: 16px;
+        width: 450px;
+        height: 50px;
+    
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        background-color: $secondary-bgcolor;
+        color: $another-txcolor;
+
+        @media screen and (min-width: $desktop) {
+            width: 358px;
+            margin-right: 12px;
+        }
+
+       
+    }
+
+    &__mail::placeholder {
+        display: block;
+        justify-content: center;
+        //text-align: center;
+        font: inherit;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+    
+        color: $another-txcolor;
+    }
+    
+    &__btn-submit {
+        @extend %btn;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 29px;
+    }
+
+    &__btn-submit:hover,
+    &__btn-submit:focus {
+        background-color: $btn-hover-color;
+    }
+
+    &__btn-submit::after {
+        position: absolute;
+        display: inline-block;
+        margin-left: 10px;
+        right: 28px;
+        top: 12px;
+    
+        width: 24px;
+        height: 24px;
+    
+        content: " ";
+        background-image: url("../images/icon-send.svg");
+        background-size: contain;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
