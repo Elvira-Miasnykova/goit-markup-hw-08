@@ -269,9 +269,15 @@
         @media screen and (max-width: 767px) {
             margin-bottom: 32px;
         }
+       
     }
 
     &__item:not(:last-child) {
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 10px;
+        
+        }
+
         @media screen and (min-width: $desktop) {
             display: flex;
             align-items: center;
