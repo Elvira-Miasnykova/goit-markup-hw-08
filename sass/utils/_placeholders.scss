@@ -63,6 +63,25 @@
         box-shadow 250ms $function-animation;
 }
 
+%title{
+    margin-bottom:30px;
+
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color: $title-txcolor;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+        font-size: 36px;
+        line-height: 1.17;
+    }
+   
+}
+
 %text{
     margin-bottom: 20px;
     font-weight: 700;

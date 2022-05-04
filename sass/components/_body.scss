@@ -5,3 +5,7 @@ font-size: 14px;
 background-color: $primery-bgcolor;
 color: $primery-txcolor;
 }
+
+body.modal-open{
+    overflow: hidden;
+}

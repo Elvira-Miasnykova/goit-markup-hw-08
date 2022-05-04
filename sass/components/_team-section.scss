@@ -49,15 +49,7 @@
      }
 
     &__title{
-        margin-bottom: 50px;
-        text-align: center;
-    
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 1.18;
-        letter-spacing: 0.03em;
-    
-        color: $title-txcolor;
+       @extend %title;
     }
   
 }

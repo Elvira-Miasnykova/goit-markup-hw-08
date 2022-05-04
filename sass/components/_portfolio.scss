@@ -1,11 +1,11 @@
 .filter-section{
    @extend %section;
     padding-top: 60px;
-    padding-bottom: 60px;
+    //padding-bottom: 60px;
 
     @media screen and (min-width: $desktop) {
         padding-top: 94px;
-        padding-bottom: 94px;
+        //padding-bottom: 94px;
     }
 
     &__container{
@@ -88,6 +88,7 @@
         flex-wrap: wrap;
         margin-right: -30px;
         margin-bottom: -30px;
+        
     }
 
     &__item {
@@ -111,11 +112,17 @@
 
       
     &__link {
+        position: relative;
         display: block;
         margin: 0;
         padding: 0;
         transition: box-shadow 250ms $function-animation;
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         
+        }
      }
    
     &__link:focus,
@@ -125,37 +132,17 @@
     }
 }
 
-.product {
+.product-box {
     position: relative;
-   // border-radius: 0px 0px 4px 4px;
-    
-    @media screen and (min-width: $tablet) {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    
-    }
+    overflow: hidden;
 
     @media screen and (min-width: $desktop) {
         display: block;
         overflow: hidden;
     }
 
-    &__container {
-        position: relative;
-        overflow: hidden;
-    }
     
-    &__img {
-        display: block;
-        width: 100%;
-        height: auto;
-        background-color: $white-txcolor;
-
-       
-    }
-    
-    &__container::before {
+    &::before {
         display: inline-block;
         position: absolute;
         content: " ";
@@ -166,11 +153,19 @@
         transform: translateY(100%);
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-
-    &__container:hover::before {
+    
+    &:hover::before {
         opacity: 1;
     }
     
+    &__img {
+        display: block;
+        width: 100%;
+        height: auto;
+        background-color: $white-txcolor;
+    }
+    
+        
     &__content {
         padding: 20px 24px;
         border-bottom: 1px solid #eeeeee;
@@ -178,12 +173,8 @@
         border-right: 1px solid #eeeeee;
         border-bottom-left-radius: 4px;
         border-bottom-right-radius: 4px;
-        
-        // @media screen and (max-width: 1190px) and (min-width: $tablet) {
-        //     flex-grow: 1;
-        // }
-        
-        
+        flex-grow: 1;
+
     }
     
     
@@ -231,8 +222,8 @@
         opacity: 1;
     }
     
-    .card-set__link:focus &__container::before,
-    .card-set__link:hover &__container::before {
+    .card-set__link:focus &::before,
+    .card-set__link:hover &::before {
         transform: translateY(0);
         opacity: 1;
     }

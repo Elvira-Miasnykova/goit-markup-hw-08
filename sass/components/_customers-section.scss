@@ -1,7 +1,8 @@
 .customers-section {
    @extend %section;
     padding-top: 60px;
-
+    overflow: hidden;
+    
     @media screen and (min-width: $desktop) {
         padding-top: 94px;
     }
@@ -11,21 +12,7 @@
     }
 
     &__title {
-        margin-bottom: 30px;
-        text-align: center;
-    
-        font-weight: 700;
-        font-size: 28px;
-        line-height: 1.18;
-        letter-spacing: 0.03em;
-    
-        color: $title-txcolor;
-
-        @media screen and (min-width: $desktop) {
-            margin-bottom: 50px;
-            font-size: 36px;
-            line-height: 1.16;
-        }
+       @extend %title;
     }
 
     &__list {
@@ -53,7 +40,7 @@
         flex-basis: calc((100% - 60px) / 2);
         margin-right: 30px;
         margin-bottom: 30px;
-
+        
         @media screen and (min-width: $tablet) {
             flex-basis: calc((100% - 90px) / 3);
             margin-right: 30px;
@@ -70,7 +57,8 @@
 
     &__link {
         @include flexPosition($type: inline-flex);
-        width: 210px;
+        max-width: 210px;
+        width: 100%;
         height: 92px;
         border: 1px solid $svg-bgcolor;
         border-radius: 4px;
