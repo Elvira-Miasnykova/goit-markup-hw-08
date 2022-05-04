@@ -51,11 +51,13 @@ img {
 }
 
 .benefits-section, .applications-section, .team-section, .customers-section, .filter-section {
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
   .benefits-section, .applications-section, .team-section, .customers-section, .filter-section {
+    padding-top: 94px;
     padding-bottom: 94px;
   }
 }
@@ -251,12 +253,16 @@ img {
     margin: 0;
     padding: 0;
     border: none;
+    color: #757575;
     background-color: transparent;
     -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .menu-button:hover, .menu-button:focus {
-    fill: #2196f3;
+    color: #2196f3;
+  }
+  .menu-button__icon--hover {
+    fill: currentColor;
   }
 }
 
@@ -434,7 +440,18 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
+  .auth-nav__item + .auth-nav__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .auth-nav__item:not(:last-child) {
     margin-bottom: 10px;
   }
@@ -442,9 +459,9 @@ img {
 
 @media screen and (min-width: 1200px) {
   .auth-nav__item:not(:last-child) {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -652,16 +669,6 @@ img {
   background-color: #188ce8;
 }
 
-.benefits-section {
-  padding-top: 60px;
-}
-
-@media screen and (min-width: 1200px) {
-  .benefits-section {
-    padding-top: 94px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .benefits-section__list {
     display: -webkit-box;
@@ -791,6 +798,10 @@ img {
   }
 }
 
+.applications-section {
+  padding-top: 0;
+}
+
 @media screen and (max-width: 1199px) {
   .applications-section {
     display: none;
@@ -841,14 +852,7 @@ img {
 }
 
 .team-section {
-  padding-top: 60px;
   background-color: #f5f4fa;
-}
-
-@media screen and (min-width: 1200px) {
-  .team-section {
-    padding-top: 94px;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -973,14 +977,7 @@ img {
 }
 
 .customers-section {
-  padding-top: 60px;
   overflow: hidden;
-}
-
-@media screen and (min-width: 1200px) {
-  .customers-section {
-    padding-top: 94px;
-  }
 }
 
 .customers-section__list {
@@ -1419,16 +1416,6 @@ img {
   content: " ";
   background-image: url("../images/icon-send.svg");
   background-size: contain;
-}
-
-.filter-section {
-  padding-top: 60px;
-}
-
-@media screen and (min-width: 1200px) {
-  .filter-section {
-    padding-top: 94px;
-  }
 }
 
 .filter-nav__list {

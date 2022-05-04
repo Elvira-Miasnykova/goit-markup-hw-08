@@ -65,13 +65,20 @@
         margin:0;
         padding: 0;
         border: none;
+        color: $primery-txcolor;
         background-color: transparent;
         transition: color 250ms $function-animation;
-
+       
         &:hover,
         &:focus {
-            fill: $accent-color;
+            color: $accent-color;
         }
+
+        &__icon--hover {
+            fill: currentColor;
+        }
+
+       
     }
    
     @media screen and (min-width: $tablet) {
@@ -80,47 +87,21 @@
 
     & .icon-cross {
         display: none;
-       // transition: color 250ms $function-animation;
-
-       // &:hover,
-        // &:focus {
-        //     fill: $accent-color;
-        // }
+      
     }
     
     &.is-open .icon-cross {
         display: block;
         transition: color 250ms $function-animation;
-        
-        // &:hover,
-        // &:focus {
-        //     fill: red;
-        // }
-        
+                      
     }
-    // &:hover .icon-cross{
-    //     fill: red;
-    // }
-    
-    
+      
     
     &.is-open .icon-menu {
         display: none;
-       // opacity: 0;
-        //pointer-events: none;
-       
-    
+        
     }
     
-    // & .icon-menu {
-    //     transition: color 2000ms $function-animation;
-
-    //     &:hover,
-    //     &:focus {
-    //         fill: $accent-color;
-    //     }
-        
-   // }
     
     &.is-open .page-header__logo {
         //display: none;
@@ -128,14 +109,6 @@
         pointer-events: none;
     }
 }
-
-
-
-
-// .icon-menu:hover, 
-// .icon-menu:focus {
-//     fill: $accent-color;
-// }
 
 .menu-container{
     @media screen and (max-width: 767px) {
@@ -270,17 +243,22 @@
         @media screen and (max-width: 767px) {
             margin-bottom: 32px;
         }
-       
-    }
-
-    &__item:not(:last-child) {
-        @media screen and (min-width: $tablet) {
-            margin-bottom: 10px;
-        
-        }
 
         @media screen and (min-width: $desktop) {
             display: flex;
+            align-items: center;
+        }
+    }
+
+
+    &__item:not(:last-child) {
+        @media screen and (min-width: $tablet) and (max-width: 1199px) {
+            margin-bottom: 10px;
+            
+        }
+
+        @media screen and (min-width: $desktop) {
+            display: inline-flex;
             align-items: center;
             margin-right: 20px;
         
@@ -290,13 +268,14 @@
        
 
     &__link {
-        
+        @extend %nav__link;
+
         @media screen and (max-width: 767px) {
             font-size: 24px;
             line-height: 1.17;
         }
 
-        @extend %nav__link;
+       
        
     }
 
