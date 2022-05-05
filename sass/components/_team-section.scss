@@ -1,6 +1,7 @@
 .team-section {
    @extend %section;
     background-color: $accent-bgcolor;
+    overflow: hidden;
    
     &__container{
         @extend %container;

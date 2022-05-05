@@ -16,14 +16,7 @@
     padding: 93px 15px 94px 15px;
     }
 
-    // @media screen and (min-width: $tablet) {
-    //     padding: 208px 159px 207px 159px;
-    // }
-
-    // @media screen and (min-width: $desktop) {
-    //     padding: 221px 536px 222px 536px;
-    // }
-
+   
     &--hidden {
         opacity: 0;
         pointer-events: none;
@@ -228,6 +221,10 @@
         position: absolute;
     }
 
+    &__policy-text {
+        display: inline-block;
+    }
+
     &__policy-link {
         //display: inline-block;
         text-decoration-line: underline;
@@ -238,7 +235,7 @@
     &__policy-label {
         display: inline-flex;
         //justify-content: center;
-        //align-items: center;
+        align-items: center;
         margin-bottom: 30px;
         cursor: pointer;
 
@@ -251,6 +248,7 @@
 
 .checkbox__icon {
     display: inline-block;
+    flex-shrink: 0;
     width: 16px;
     height: 15px;
     margin-right: 8px;
@@ -260,7 +258,8 @@
     .checkbox__policy-checkbox:checked + & {
         background-color: $accent-color;
         background-image: url('../images/Vector\ \(2\).svg');
-        background-size: contain;
+        background-position: 50% 50%;
+        background-size: 13px auto;
         background-origin: border-box;
         border-color: $accent-color;
     }

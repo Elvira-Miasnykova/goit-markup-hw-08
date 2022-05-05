@@ -1,5 +1,6 @@
 .benefits-section {
     @extend %section;
+    overflow: hidden;
    
     &__container {
         @extend %container;

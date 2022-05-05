@@ -52,7 +52,7 @@
 
     &__link {
         @include flexPosition($type: inline-flex);
-        max-width: 210px;
+        //max-width: 210px;
         width: 100%;
         height: 92px;
         border: 1px solid $svg-bgcolor;
@@ -61,15 +61,7 @@
         transition: color 250ms $function-animation,
             border-color 250ms $function-animation;
 
-        @media screen and (min-width: $tablet) {
-            width: 226px;
-            
-        }
-
-        @media screen and (min-width: $desktop) {
-            width: 170px;
-        
-        }
+       
     }
 
     &__link:focus,

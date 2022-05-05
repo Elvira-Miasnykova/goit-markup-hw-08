@@ -278,8 +278,6 @@ img {
 
 .menu-button.is-open .icon-cross {
   display: block;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-button.is-open .icon-menu {
@@ -291,6 +289,19 @@ img {
   pointer-events: none;
 }
 
+.menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
@@ -298,7 +309,7 @@ img {
     top: 100%;
     left: 0;
     width: 100%;
-    max-height: 796px;
+    height: calc(100vh - 60px);
     padding: 0 40px 48px;
     background-color: #ffffff;
     z-index: 99;
@@ -322,12 +333,6 @@ img {
 
 .menu-container.is-open {
   display: block;
-}
-
-@media screen and (max-width: 767px) {
-  .main-nav {
-    margin-bottom: 302px;
-  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -669,6 +674,10 @@ img {
   background-color: #188ce8;
 }
 
+.benefits-section {
+  overflow: hidden;
+}
+
 @media screen and (min-width: 768px) {
   .benefits-section__list {
     display: -webkit-box;
@@ -853,6 +862,7 @@ img {
 
 .team-section {
   background-color: #f5f4fa;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
@@ -1046,7 +1056,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 210px;
   width: 100%;
   height: 92px;
   border: 1px solid #afb1b8;
@@ -1054,18 +1063,6 @@ img {
   color: #afb1b8;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (min-width: 768px) {
-  .customers-section__link {
-    width: 226px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .customers-section__link {
-    width: 170px;
-  }
 }
 
 .customers-section__link:focus, .customers-section__link:hover {
@@ -1615,11 +1612,17 @@ img {
 
 .product-box__text {
   position: absolute;
-  width: 370px;
-  height: 294px;
+  width: 100%;
+  height: 100%;
   left: 0;
   top: 0;
-  padding: 63px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 24px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
@@ -1910,6 +1913,10 @@ img {
   position: absolute;
 }
 
+.checkbox__policy-text {
+  display: inline-block;
+}
+
 .checkbox__policy-link {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -1921,6 +1928,9 @@ img {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 30px;
   cursor: pointer;
 }
@@ -1933,6 +1943,8 @@ img {
 
 .checkbox__icon {
   display: inline-block;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 16px;
   height: 15px;
   margin-right: 8px;
@@ -1943,7 +1955,8 @@ img {
 .checkbox__policy-checkbox:checked + .checkbox__icon {
   background-color: #2196f3;
   background-image: url("../images/Vector (2).svg");
-  background-size: contain;
+  background-position: 50% 50%;
+  background-size: 13px auto;
   background-origin: border-box;
   border-color: #2196f3;
 }

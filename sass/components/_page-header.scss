@@ -1,6 +1,7 @@
 .page-header {
         border-bottom: 1px solid #ececec;
         position: relative;
+       
 
         &__container {
             @media screen and (max-width: 767px) {
@@ -92,7 +93,7 @@
     
     &.is-open .icon-cross {
         display: block;
-        transition: color 250ms $function-animation;
+        // transition: color 250ms $function-animation;
                       
     }
       
@@ -111,15 +112,19 @@
 }
 
 .menu-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     @media screen and (max-width: 767px) {
         display: none;
         position:absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        //height: calc(100% - 60px);
-        max-height: 796px;
-       // height: 100%;
+        height: calc(100vh - 60px);
+       // max-height: 796px;
+        //height: 100%;
         padding: 0 40px 48px;
       
         background-color: $white-txcolor;
@@ -128,7 +133,7 @@
 
     @media screen and (min-width: $tablet){
         display: flex;
-       // flex-direction: column;
+        //flex-direction: column;
         justify-content: space-between;
         align-items: center;
         margin-left: auto;
@@ -142,7 +147,7 @@
 
  .main-nav {
      @media screen and (max-width: 767px)  {
-        margin-bottom: 302px;
+       // margin-bottom: 302px;
      }
 
     @media screen and (max-width: 1199px) {
