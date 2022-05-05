@@ -4,8 +4,10 @@ font-weight: 400;
 font-size: 14px;
 background-color: $primery-bgcolor;
 color: $primery-txcolor;
+//overflow-y: scroll;
 }
 
 body.modal-open{
     overflow: hidden;
 }
+

@@ -307,7 +307,7 @@ img {
   .menu-container__wraper {
     width: 100%;
     height: calc(100vh - 60px);
-    padding: 40px 48px;
+    padding: 48px 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

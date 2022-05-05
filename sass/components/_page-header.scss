@@ -139,10 +139,10 @@
         @media screen and (max-width: 767px) {
             width: 100%;
             height: calc(100vh - 60px);
-            padding: 40px 48px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+            padding: 48px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             background-color: $white-txcolor;
         }
 
@@ -150,10 +150,9 @@
         @media screen and (min-width: $tablet) {
             display: flex;
             flex-direction: row;
-            //flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            // margin-left: auto;
+            
         }
     }
 }
