@@ -6,29 +6,24 @@
         &__container {
             @media screen and (max-width: 767px) {
                 display: flex;
+                justify-content: space-between;
+                align-items: center;
                 padding-top: 16px;
                 padding-bottom: 16px;
-                justify-content: space-between;
             }
 
             @extend %container;
-            // display: flex;
             
-            // align-items: center;
-
             @media screen and (min-width: $tablet) {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                align-items: center;
                 padding-top: 0;
                 padding-bottom: 0;
             }
             
-            @media screen and (min-width: $desktop) {
-               // justify-content: space-between;
-                
-            }
-            }
+        }
         
               
         
@@ -70,7 +65,7 @@
         margin:0;
         padding: 0;
         border: none;
-        color: $primery-txcolor;
+        color: $title-txcolor;
         background-color: transparent;
         transition: color 250ms $function-animation;
        
