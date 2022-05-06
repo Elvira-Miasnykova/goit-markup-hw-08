@@ -133,6 +133,7 @@
 
     &.is-open{
         display: block;
+        overflow-y: scroll;
     }
 
     &__wraper{

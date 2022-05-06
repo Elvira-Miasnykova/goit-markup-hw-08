@@ -301,6 +301,7 @@ img {
 
 .menu-container.is-open {
   display: block;
+  overflow-y: scroll;
 }
 
 @media screen and (max-width: 767px) {
